@@ -6,18 +6,27 @@ This repository contains my personal [BetterMouse](https://better-mouse.com/) co
 
 BetterMouse is a macOS application that provides advanced customization options for mice and keyboards, enhancing productivity and user experience.
 
-## Configuration File
+## Configuration Files
 
-- **`bm_cfg_8615.plist`** - BetterMouse configuration file (version 8615)
+- **`bm_cfg_8615-mxmaster3.plist`** - Configuration for Logitech MX Master 3 Mac (version 8615)
+- **`bm_cfg_8615-mxmaster4.plist`** - Configuration for Logitech MX Master 4 Mac (version 8615)
 
 ## Included Settings
 
-This configuration includes settings for:
+These configurations include settings for:
 
-### Mouse
+### Mice
 - **Logitech MX Master 3 Mac**
   - Custom DPI settings
   - Button mappings (Click, Move, Zoom, Scroll)
+  - Scroll behavior (vertical/horizontal)
+  - Ratchet mode configuration
+  - Haptic feedback settings
+  - High-resolution wheel support
+
+- **Logitech MX Master 4 Mac**
+  - Custom DPI settings
+  - Button mappings (Click, Move, Zoom, VScroll, HScroll, None)
   - Scroll behavior (vertical/horizontal)
   - Ratchet mode configuration
   - Haptic feedback settings
@@ -41,7 +50,9 @@ This configuration includes settings for:
 ## Installation
 
 1. Install [BetterMouse](https://better-mouse.com/) on your macOS system
-2. Download the `bm_cfg_8615.plist` configuration file
+2. Download the appropriate configuration file for your mouse:
+   - `bm_cfg_8615-mxmaster3.plist` for MX Master 3
+   - `bm_cfg_8615-mxmaster4.plist` for MX Master 4
 3. Import the configuration through BetterMouse's settings interface
 4. Adjust individual settings as needed for your specific hardware and preferences
 
@@ -55,7 +66,7 @@ After importing the configuration:
 
 ## Notes
 
-- This configuration is optimized for the Logitech MX Master 3 Mac mouse
+- Configurations are optimized for Logitech MX Master 3 and MX Master 4 mice respectively
 - Settings may need adjustment for different mouse models
 - Ensure BetterMouse is set to launch at login for consistent behavior
 - Configuration version: 8615
