@@ -60,16 +60,17 @@ if command -v plutil >/dev/null 2>&1; then
   fi
 fi
 
-# --- Open BetterMouse -------------------------------------------------------
-log "Opening ${APP_NAME}…"
-open -a "${APP_NAME}" || warn "Could not launch ${APP_NAME}; open it manually from /Applications."
+# --- Open BetterMouse with settings ----------------------------------------
+log "Opening ${APP_NAME} with settings from ${DEST_PATH}…"
+open -a "${APP_NAME}.app" -n --args "${DEST_PATH}" \
+  || warn "Could not launch ${APP_NAME}; open it manually from /Applications."
+
+# Give BetterMouse a moment to read the file before we delete it
+sleep 5
+log "Removing downloaded settings file ${DEST_PATH}…"
+rm -f "${DEST_PATH}"
 
 log "Done ✅"
-echo
-echo "Manual import next:"
-echo "  1) In ${APP_NAME}, go to the Settings tab."
-echo "  2) Click “Load settings from file”."
-echo "  3) Select: ${DEST_PATH}"
 echo
 warn "If macOS prompts for Accessibility access, enable ${APP_NAME} in System Settings → Privacy & Security → Accessibility."
 ``
