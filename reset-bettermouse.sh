@@ -4,6 +4,7 @@ set -euo pipefail
 APP_NAME="BetterMouse"
 CASK="bettermouse"
 BUNDLE_ID="com.naotanhaocan.BetterMouse"
+APP_PATH="/Applications/${APP_NAME}.app"
 
 # Your config on GitHub (RAW URL, not the blob page).
 RAW_CFG_URL="https://raw.githubusercontent.com/MattijsE/bettermouse-settings/main/bm_cfg_8615-mxmaster4.plist"
@@ -36,6 +37,7 @@ brew uninstall --cask "${CASK}" --zap >/dev/null 2>&1 || true
 # Belt-and-suspenders cleanup (matches cask zap)
 log "Verifying no leftovers remain…"
 rm -rf \
+  "${APP_PATH}" \
   "${HOME}/Library/Application Support/BetterMouse" \
   "${HOME}/Library/Caches/${BUNDLE_ID}" \
   "${HOME}/Library/HTTPStorages/${BUNDLE_ID}"* \
